@@ -32,5 +32,9 @@
     + mensajes de bienvenida y de despedida.
 
 # Fix
-+ Changed the way of validate our menu option
++ Changed the way of validating our menu option
+
+# Fixv2
++ Deleted unneeded comments
++ Changed the way of validating our menu option
  

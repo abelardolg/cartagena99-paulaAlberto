@@ -37,4 +37,6 @@
 # Fixv2
 + Deleted unneeded comments
 + Changed the way of validating our menu option
- 
+
+# Fixv3
++ Fixed adding parameter to the validate function

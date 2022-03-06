@@ -1,11 +1,16 @@
 /**
- * Calculadorav3.0:
- * estructura de datos: solo variables
+ * Calculadorav4.0:
+ * estructura de datos: structs
  * bucles: sí
  * nuevas características:
- * abstraccion procedimental (funciones y procedimientos)
+ * -
  */
 #include "stdio.h"
+
+
+typedef struct {
+    int operando1, operando2, resultado;
+}T_OPERACION;
 
 void mostrarMensajeBienvenida();
 void mostrarMenu();
@@ -21,7 +26,7 @@ void mostrarMensajeDespedida();
 
 int main(VOID) {
     int opcion;
-    int operando1, operando2, resultado;
+    T_OPERACION operacion;
 
     mostrarMensajeBienvenida();
 
@@ -38,45 +43,45 @@ int main(VOID) {
         switch (opcion) {
             case 1:
                 puts("Por favor, introduce el sumando 1:");
-                operando1 = leerOperando();
+                operacion.operando1 = leerOperando();
                 puts("Por favor, introduce el sumando 2:");
-                operando2 = leerOperando();
+                operacion.operando2 = leerOperando();
 
-                resultado = sumar(operando1, operando2);
+                operacion.resultado = sumar(operacion.operando1, operacion.operando2);
 
-                mostrarResultado(resultado);
+                mostrarResultado(operacion.resultado);
                 break;
             case 2:
                 puts("Por favor, introduce el minuendo:");
-                operando1 = leerOperando();
+                operacion.operando1 = leerOperando();
                 puts("Por favor, introduce el sustraendo:");
-                operando2 = leerOperando();
+                operacion.operando2 = leerOperando();
 
-                resultado = restar(operando1, operando2);
+                operacion.resultado = restar(operacion.operando1, operacion.operando2);
 
-                mostrarResultado(resultado);
+                mostrarResultado(operacion.resultado);
                 break;
             case 3:
                 puts("Por favor, introduce el multiplicando:");
-                operando1 = leerOperando();
+                operacion.operando1 = leerOperando();
                 puts("Por favor, introduce el multiplicador:");
-                operando2 = leerOperando();
+                operacion.operando2 = leerOperando();
 
-                resultado = multiplicar(operando1,operando2);
+                operacion.resultado = multiplicar(operacion.operando1,operacion.operando2);
 
-                mostrarResultado(resultado);
+                mostrarResultado(operacion.resultado);
                 break;
             case 4:
                 puts("Por favor, introduce el dividendo:");
-                operando1 = leerOperando();
+                operacion.operando1 = leerOperando();
                 puts("Por favor, introduce el divisor:");
-                operando2 = leerOperando();
+                operacion.operando2 = leerOperando();
 
-                if (operando2 == 0) {
+                if (operacion.operando2 == 0) {
                     puts("La división da como resultado infinito (división entre cero).");
                 } else {
-                    resultado = dividir(operando1, operando2);
-                    mostrarResultado(resultado);
+                    operacion.resultado = dividir(operacion.operando1, operacion.operando2);
+                    mostrarResultado(operacion.resultado);
                 }
                 break;
             default: // Buena práctica pero totalmente innecesaria
@@ -145,5 +150,5 @@ void mostrarResultado(int resultado) {
 }
 
 void mostrarMensajeDespedida() {
-    puts("Gracias por usar la Calculadorav3");
+    puts("Gracias por usar la Calculadorav4");
 }

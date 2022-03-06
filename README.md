@@ -30,4 +30,11 @@
     + validación de datos.
     + ejecución hasta decisión del usuario de salir.
     + mensajes de bienvenida y de despedida.
+
+# Fix
++ Changed the way of validating our menu option
+
+# Fixv2
++ Deleted unneeded comments
++ Changed the way of validating our menu option
  

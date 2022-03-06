@@ -15,7 +15,7 @@ typedef struct {
 void mostrarMensajeBienvenida();
 void mostrarMenu();
 int leerOpcionMenu();
-int esOpcionMenuValida(int);
+int esOpcionMenuValida();
 int leerOperando();
 int sumar(int, int);
 int restar(int, int);
@@ -31,13 +31,8 @@ int main(VOID) {
     mostrarMensajeBienvenida();
 
     do{
-        /**
-         * 1. Mostramos menú
-         */
         mostrarMenu();
-        /**
-         * 2. En esta versión SÍ validamos los datos.
-        */
+
         do {
             opcion = leerOpcionMenu();
         } while (!esOpcionMenuValida(opcion));

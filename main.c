@@ -15,7 +15,7 @@ typedef struct {
 void mostrarMensajeBienvenida();
 void mostrarMenu();
 int leerOpcionMenu();
-int esOpcionMenuValida();
+int esOpcionMenuValida(int);
 int leerOperando();
 int sumar(int, int);
 int restar(int, int);

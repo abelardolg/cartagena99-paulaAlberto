@@ -92,7 +92,7 @@ int main(VOID) {
 }
 
 void mostrarMensajeBienvenida() {
-    puts("Os damos la bienvenida a Calculadorav3.");
+    puts("Os damos la bienvenida a Calculadorav4.");
 }
 
 void mostrarMenu() {

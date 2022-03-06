@@ -31,13 +31,9 @@ int main(VOID) {
     mostrarMensajeBienvenida();
 
     do{
-        /**
-         * 1. Mostramos menú
-         */
+
         mostrarMenu();
-        /**
-         * 2. En esta versión SÍ validamos los datos.
-        */
+
         opcion = validarOpcionMenu();
 
         switch (opcion) {

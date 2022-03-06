@@ -15,7 +15,7 @@ typedef struct {
 void mostrarMensajeBienvenida();
 void mostrarMenu();
 int leerOpcionMenu();
-int validarOpcionMenu();
+int esOpcionMenuValida(int);
 int leerOperando();
 int sumar(int, int);
 int restar(int, int);
@@ -38,7 +38,9 @@ int main(VOID) {
         /**
          * 2. En esta versión SÍ validamos los datos.
         */
-        opcion = validarOpcionMenu();
+        do {
+            opcion = leerOpcionMenu();
+        } while (!esOpcionMenuValida(opcion));
 
         switch (opcion) {
             case 1:
@@ -113,14 +115,8 @@ int leerOpcionMenu() {
     return opcion;
 }
 
-int validarOpcionMenu() {
-    int opcion;
-
-    do {
-        opcion = leerOpcionMenu();
-    } while (!(opcion >= 1 && opcion <= 5));
-
-    return opcion;
+int esOpcionMenuValida(int opcion) {
+    return (opcion >= 1 && opcion <= 5);
 }
 
 int leerOperando() {
